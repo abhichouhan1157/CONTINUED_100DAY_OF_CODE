@@ -1,0 +1,21 @@
+class Solution
+{
+  public:
+    int MissingNumber(vector<int>& array, int n) 
+    {
+        // Your code goes here
+       int s=0,m=0;
+        for(int i=1;i<=n;i++)
+        {
+          s=s+i;  
+        }
+        for(int i=0;i<array.size();i++){
+           m=m+array[i]; 
+        }
+        if(s-m!=0){
+        return s-m;
+        }
+        else
+        return -1;
+    }
+};
